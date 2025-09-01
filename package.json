@@ -1,0 +1,29 @@
+{
+  "name": "linear-landing-page",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "tailwindcss -i ./src/input.css -o ./src/output.css",
+    "build:css:watch": "tailwindcss -i ./src/input.css -o ./src/output.css --watch",
+    "dev": "npm run build:css:watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KrishK060/Linear-landing-page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KrishK060/Linear-landing-page/issues"
+  },
+  "homepage": "https://github.com/KrishK060/Linear-landing-page#readme",
+  "description": "",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.12",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.12"
+  }
+}
