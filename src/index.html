@@ -6,6 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linear landing page</title>
     <link href="./output.css" rel="stylesheet">
+    <style>
+        .card-wrapper {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        html, body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* prevent horizontal scrollbar */
+        }
+        /* Hide vertical scrollbar but keep scrolling */
+        body {
+            overflow-y: scroll;
+            -ms-overflow-style: none; /* IE/Edge */
+            scrollbar-width: none;    /* Firefox */
+        }
+        body::-webkit-scrollbar {
+            display: none;            /* Chrome/Safari */
+        }
+    </style>
 </head>
 
 <body class="bg-black">
@@ -178,7 +198,7 @@
             <img src="./images/image.png">
         </div>
         <div class="text-white text-center space-y-2">
-            <h5 class="font-bold text-2xl">Powering the world’s best product teams.</h5>
+            <h5 class="font-bold text-2xl">Powering the world's best product teams.</h5>
             <h5 class="font-bold text-2xl text-gray-500">From next-gen startups to established enterprises.</h5>
         </div>
         <div class="relative grid grid-cols-3 gap-y-12 text-white text-center place-items-center mt-10 group">
@@ -187,7 +207,7 @@
                     src="data:image/png;base64,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">
             </div>
             <div><img class="h-12 w-auto  group-hover:blur-sm transition"
-                    src="data:image/jpeg;base64,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">
+                    src="data:image/jpeg;base64,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">
             </div>
             <div><img class="h-25 w-auto  group-hover:blur-sm transition"
                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAclBMVEUAAAD///+2traHh4dVVVXg4OArKyv4+Pi7u7va2trNzc3z8/PDw8MmJiaMjIy/v79sbGyDg4N3d3fm5uY+Pj4WFhbR0dEuLi7s7Oyenp6vr69dXV1jY2NNTU1XV1fHx8cfHx81NTWmpqZGRkYbGxsODg7fKeS0AAACSklEQVR4nO3Y23aiMBiG4QQFQRoL4r7aOnbm/m9x/oS92q62B8Tq+xxUkgZNvhVCQCkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwO+xTUKnLM2LsBIv/PbrFqW6UhZHujXy27PbE+qPw9IHv33zbfE67nnTl2E9l0eJ1it/Hb0FsT6TWv2wnsqjpauLzFEWsjwzUpHlmf3HH2Oqb4tMZC5/424E/aiqqTO9FpaydWutpzM5mKjjyp0Rl4G7Bls5iIYfw2D6YaVV7dWwMq03KqpaHk3nnELrRBq8SunFxyCG0gurWFa1/bCSeS5OUpWXYSVBpjbyeZrZ09/cBbp1M+/kbSBDcGGNZs64qe2H1ZBAoiqRzF6JYiFlo/by911uAKGPIQwnaGPp+DwsWy3r1KxuKge77g30bn0lrCQfie3EbiKiakbJNJo40jBQbtm68wVLfS2szt1wYaqwis6Es/uwhVu87tx3wrKX3t92Zq3i0vNcPeTMynaBtdtcDSvphBW4Faz/NVr/G6jXnvTCCnVXWdc+7tgt57i+DF+ksJbPfZgURzWX0kHOLgbv/6C6Ya309bDSxLLPQEWzwLtgn072ek2UcXdKu9va+RnFQDphnfQHYTUmpg1rOakrl3aDanfwdreV+RnGMM6eDS/DmjXl1E6bdTsR4/pWOK3rbNz3/IawDesHu+/D/rFecAVnEwmfaN5nvfvuyS+Qx25nxdt1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHgA/wHG+hHuSpET+QAAAABJRU5ErkJggg==">
@@ -277,7 +297,7 @@
 
             <h1 class="text-5xl font-bold leading-tight mt-5">Set the product direction</h1>
             <p class="font-bold mt-15">Align your team around a unified product timeline</p>
-            <p class="text-gray-500">Plan, manage, and track all product<br>initiatives with Linear’s visual planning
+            <p class="text-gray-500">Plan, manage, and track all product<br>initiatives with Linear's visual planning
                 tools.
             </p>
             <img class="mt-20" src="./images/image2.png" alt="image2">
@@ -395,16 +415,16 @@
         </div>
         <hr class="border-t border-gray-800 mt-5 w-[60%] mx-auto" />
         <div class="text-white ml-95 mt-30">
-          
+
             <h1 class="text-3xl font-bold leading-tight mt-5">Linear Insights</h1>
-            <p class="font-bold mt-5">Take the guesswork out of product planning with <br>realtime analytics and reporting dashboards.</p>
-            <a href="#"
-            class="inline-block mt-5 px-4 py-2 text-white"
-            style="border: 1px solid gray; border-radius: 8px; background-color: black;">
-            Learn more
-         </a>
-         
-         <img class="mt-20" src="./images/image9.png" alt="image2">
+            <p class="font-bold mt-5">Take the guesswork out of product planning with <br>realtime analytics and
+                reporting dashboards.</p>
+            <a href="#" class="inline-block mt-5 px-4 py-2 text-white"
+                style="border: 1px solid gray; border-radius: 8px; background-color: black;">
+                Learn more
+            </a>
+
+            <img class="mt-20" src="./images/image9.png" alt="image2">
         </div>
         <hr class="border-t border-gray-900 mt-20 w-[60%] mx-auto" />
         <div class="text-white flex justify-center-safe mt-10 gap-25">
@@ -418,7 +438,7 @@
             </div>
             <div>
                 <h1 class="mb-5">Filters</h1>
-                <p class="text-gray-500">Refine issue lists down to what’s<br>most relevant to you.</p>
+                <p class="text-gray-500">Refine issue lists down to what's<br>most relevant to you.</p>
             </div>
             <div>
                 <h1 class="mb-5">SLAs</h1>
@@ -434,8 +454,8 @@
                 <span class="h-2 w-4 bg-blue-600 rounded"></span>
                 <h3 class="text-white font-semibold">Artificial Intelligence<span
                         class="ml-5 text-xl hover:text-sm">></span>
-                    </h3>
-                </div>
+                </h3>
+            </div>
             </p>
 
 
@@ -443,11 +463,10 @@
             <p class="font-bold mt-15">Linear for Agents. Choose from a variety of AI</p>
             <p class="text-gray-500">agents and start delegating work, from code<br>generation to other technical tasks
             </p>
-            <a href="#"
-                    class="inline-block mt-5 px-4 py-2 text-white"
-                    style="border: 1px solid gray; border-radius: 8px; background-color: black;">
-                    Learn more
-                 </a>
+            <a href="#" class="inline-block mt-5 px-4 py-2 text-white"
+                style="border: 1px solid gray; border-radius: 8px; background-color: black;">
+                Learn more
+            </a>
             <img class="mt-20" src="./images/image10.png" alt="image2">
         </div>
         <hr class="border-t border-gray-800 mt-5 w-[60%] mx-auto" />
@@ -458,7 +477,7 @@
                 <h2 class="text-xl font-bold mb-6 ml-82">Product Intelligence</h2>
                 <p class="text-gray-400 text-lg mb-8 ml-82">Streamline your product development workflows <br>
                     with AI assistance for routine, manual tasks.</p>
-                    
+
                 <img class="size-100 ml-80" src="./images/image11.png">
             </div>
 
@@ -466,10 +485,11 @@
 
             <div class="lg:w-1/2 p-8 lg:p-16 flex flex-col justify-center relative overflow-hidden">
                 <h2 class="text-xl font-bold mb-6">Linear MCP</h2>
-                <p class="text-gray-400 text-lg mb-8">Connect Linear to your favorite tools<br> including Cursor, Claude, ChatGPT, and more.
+                <p class="text-gray-400 text-lg mb-8">Connect Linear to your favorite tools<br> including Cursor,
+                    Claude, ChatGPT, and more.
 
                 </p>
-                
+
                 <img class="size-100 mt-5" src="./images/image12.png">
             </div>
 
@@ -477,8 +497,340 @@
         </div>
         <hr class="border-t border-gray-800 mt-5 w-[60%] mx-auto" />
         <div class="text-white flex justify-self gap-80">
-        
+
     </section>
+    <section class="bg-gradient-to-b  from-gray-950  to-black p-4 mt-50 mb-50">
+
+        <div class="text-white ml-95 mt-30">
+            <p>
+            <div class="flex items-center gap-3">
+                <span class="h-2 w-4 bg-purple-600 rounded"></span>
+                <h3 class="text-white font-semibold">Workflows and integrations
+                    <span class="ml-5 text-xl hover:text-sm">></span>
+                </h3>
+            </div>
+            </p>
+
+            <div class="flex items-start text-white mt-20 px-12 gap-10">
+
+                <h1 class="text-5xl font-bold leading-tight">
+                    Collaborate across <br> tools and teams
+                </h1>
+
+                <p class="text-gray-400 text-lg max-w-md">
+                    Expand the capabilities of the Linear system <br>
+                    with a wide variety of integrations that keep <br>
+                    everyone in your organization aligned and focused.
+                </p>
+            </div>
+            <div class="flex flex-col items-center justify-center mt-10">
+                <div class="carousel-container">
+                    <div class="card-wrapper flex justify-center gap-2">
+                        <div class="card relative w-80 aspect-square bg-black flex flex-col justify-between p-6 flex-shrink-0 border border-gray-800 mb-4"
+                            style="border-radius:10px">
+                            <img class="w-full h-auto object-cover rounded-md mb-4"
+                                src="https://linear.app/cdn-cgi/imagedelivery/fO02fVwohEs9s9UHFwon6A/b4ccc6c0-b86b-4e9c-04a9-2ea66fa48e00/f=auto,dpr=2,q=95,fit=scale-down,metadata=none"
+                                alt="Card Image" />
+                            <div class="flex justify-around items-end h-1/2">
+                                <div>
+                                    <h4 class="text-sm text-gray-400">Customer Requests</h4>
+                                    <h2 class="font-bold mt-1 leading-snug">
+                                        Build what customers <br /> actually want
+                                    </h2>
+                                </div>
+                                <div
+                                    class="mb-2 border border-white p-4 rounded-lg flex items-center justify-center h-10 w-10">
+                                    <a>></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card relative w-80 aspect-square bg-black flex flex-col justify-between p-6 flex-shrink-0 border border-gray-800 mb-4"
+                            style="border-radius:10px">
+                            <img class="w-full h-auto object-cover rounded-md mb-4"
+                                src="https://linear.app/cdn-cgi/imagedelivery/fO02fVwohEs9s9UHFwon6A/2b394a72-ba7c-40d7-8f93-3b837b296d00/f=auto,dpr=2,q=95,fit=scale-down,metadata=none"
+                                alt="Card Image" />
+                            <div class="flex justify-around items-end h-1/2">
+                                <div>
+                                    <h4 class="text-sm text-gray-400">Powerful git workflows</h4>
+                                    <h2 class="font-bold mt-1 leading-snug">
+                                        Automate pull requests <br /> and commit workflows
+                                    </h2>
+                                </div>
+                                <div
+                                    class="mb-2 border border-white p-4 rounded-lg flex items-center justify-center h-10 w-10">
+                                    <a>></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card relative w-80 aspect-square bg-black g-gray-500 flex flex-col justify-between p-6 flex-shrink-0 border border-gray-800 mb-4"
+                            style="border-radius:10px">
+                            <img class="w-full h-auto object-cover rounded-md mb-4"
+                                src="https://linear.app/cdn-cgi/imagedelivery/fO02fVwohEs9s9UHFwon6A/906ad833-45a5-4b19-e4de-153896e13e00/f=auto,dpr=2,q=95,fit=scale-down,metadata=none"
+                                alt="Card Image" />
+                            <div class="flex justify-around items-end h-1/2">
+                                <div>
+                                    <h4 class="text-sm text-gray-400">Linear Mobile</h4>
+                                    <h2 class="font-bold mt-1 leading-snug">
+                                        Move product work <br />forward from anywhere
+                                    </h2>
+                                </div>
+                                <div
+                                    class="mb-2 border border-white p-4 rounded-lg flex items-center justify-center h-10 w-10">
+                                    <a>></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card relative w-80 aspect-square bg-black flex flex-col justify-between p-6 flex-shrink-0 border border-gray-800 mb-4"
+                            style="border-radius:10px">
+                            <img class="w-full h-auto object-cover rounded-md mb-4"
+                                src="https://linear.app/cdn-cgi/imagedelivery/fO02fVwohEs9s9UHFwon6A/0e7273bb-e885-4715-4f2d-bc67fb4eb300/f=auto,dpr=2,q=95,fit=scale-down,metadata=none"
+                                alt="Card Image" />
+                            <div class="flex justify-around items-end h-1/2">
+                                <div>
+                                    <h4 class="text-sm text-gray-400">Linear Ask</h4>
+                                    <h2 class="font-bold mt-1 leading-snug">
+                                        Turn workplace requests <br>into actionable issues
+                                    </h2>
+                                </div>
+                                <div
+                                    class="mb-2 border border-white p-4 rounded-lg flex items-center justify-center h-10 w-10">
+                                    <a>></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card relative w-80 aspect-square bg-black flex flex-col justify-between p-6 flex-shrink-0 border border-gray-800 mb-4"
+                            style="border-radius:10px">
+                            <img class="w-full h-auto object-cover rounded-md mb-4"
+                                src="https://linear.app/cdn-cgi/imagedelivery/fO02fVwohEs9s9UHFwon6A/71e8ff5e-2889-4b4d-e12c-d3bb8d817700/f=auto,dpr=2,q=95,fit=scale-down,metadata=none"
+                                alt="Card Image" />
+                            <div class="flex justify-around items-end h-1/2">
+                                <div>
+                                    <h4 class="text-sm text-gray-400">Linear Integration</h4>
+                                    <h2 class="font-bold mt-1 leading-snug">
+                                        100+ ways to enhance <br>your linear experience
+                                    </h2>
+                                </div>
+                                <div
+                                    class="mb-2 border border-white p-4 rounded-lg flex items-center justify-center h-10 w-10">
+                                    <a>></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card relative w-80 aspect-square bg-black flex flex-col justify-between p-6 flex-shrink-0 border border-gray-800 mb-4"
+                            style="border-radius:10px">
+                            <img class="w-full h-auto object-cover rounded-md mb-4"
+                                src="https://linear.app/cdn-cgi/imagedelivery/fO02fVwohEs9s9UHFwon6A/a516badb-c0aa-4d0d-2ffa-965b529e1a00/f=auto,dpr=2,q=95,fit=scale-down,metadata=none"
+                                alt="Card Image" />
+                            <div class="flex justify-around items-end h-1/2">
+                                <div>
+                                    <h4 class="text-sm text-gray-400">Build for developer</h4>
+                                    <h2 class="font-bold mt-1 leading-snug">
+                                        Build your own add-<br>ons with the linear API
+                                    </h2>
+                                </div>
+                                <div
+                                    class="mb-2 border border-white p-4 rounded-lg flex items-center justify-center h-10 w-10">
+                                    <a>></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-center space-x-9 mt-6">
+                    <button id="prevBtn"
+                        class="w-15 h-15 flex items-center justify-center rounded-full bg-gray-800 text-white text-2xl font-bold shadow-md transition-colors duration-200 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500">
+                        <span aria-hidden="true">←</span>
+                    </button>
+                    <button id="nextBtn"
+                        class="w-15 h-15 flex items-center justify-center rounded-full bg-gray-800 text-white text-2xl font-bold shadow-md transition-colors duration-200 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500">
+                        <span aria-hidden="true">→</span>
+                    </button>
+                </div>
+            </div>
+    </section>
+    <section class="bg-gradient-to-b from-gray-950 to-black p-10 mt-20 mb-20">
+        <div class="flex justify-between items-start gap-16">
+
+
+            <div class="text-white ml-95 mt-30">
+
+                <div class="flex items-center gap-3 mb-5">
+                    <span class="h-2 w-4 bg-gray-800 border-r border-white rounded"></span>
+                    <h3 class="text-white font-semibold">Under the hood</h3>
+                </div>
+
+
+                <h1 class="text-5xl font-bold leading-tight mb-5">
+                    Built on strong<br />foundations
+                </h1>
+
+
+                <p class="text-gray-400 text-lg mb-5">
+                    Linear is so simple to use, it's easy to overlook the <br />
+                    wealth of complex technologies packed under the <br />
+                    hood that keep Linear robust, safe, and blazing fast.
+                </p>
+
+                <hr class="border-t border-gray-800 w-100 mb-8" />
+
+
+                <div class="space-y-8">
+                    <div class="flex gap-10">
+                        <h1 class="font-bold w-48">Linear Sync Engine</h1>
+                        <p>Built with a high-<br>performance<br>architecture and<br>an obsessive focus<br>on speed.</p>
+                    </div>
+                    <div class="flex gap-10">
+                        <h1 class="font-bold w-48">Enterprise-ready security</h1>
+                        <p>Best-in-class security<br>practices keep your<br>work safe and secure<br>at every layer.</p>
+                    </div>
+                    <div class="flex gap-10">
+                        <h1 class="font-bold w-48">Engineered for scale</h1>
+                        <p>Built for teams of all<br>sizes. From early-stage<br>startups to global<br>enterprises.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="flex-1">
+                <img src="./images/image13.png" alt="illustration" class="h-auto" />
+            </div>
+        </div>
+        <hr class="border-t border-gray-800 w-110 ml-93" />
+        <div class="flex gap-30 ml-95 text-white mt-5">
+            <div> <img class="size-15"
+                    src="https://linear.app/cdn-cgi/imagedelivery/fO02fVwohEs9s9UHFwon6A/cc904d39-7051-4326-66a3-a8bee9623b00/f=auto,dpr=2,q=95,fit=scale-down,metadata=none">
+                <p class="m-2">SOC 2</p>
+            </div>
+            <div> <img class="size-15"
+                    src="https://linear.app/cdn-cgi/imagedelivery/fO02fVwohEs9s9UHFwon6A/7c88d201-223f-4cd5-ed1b-6bca858be900/f=auto,dpr=2,q=95,fit=scale-down,metadata=none">
+                <p class="m-2">GDPR</p>
+            </div>
+            <div> <img class="size-15"
+                    src="https://linear.app/cdn-cgi/imagedelivery/fO02fVwohEs9s9UHFwon6A/3bda4af5-963c-466b-7577-b8b8ec178e00/f=auto,dpr=2,q=95,fit=scale-down,metadata=none">
+                <p class="m-2">HIPAA</p>
+            </div>
+        </div>
+
+        <div class="text-white flex justify-evenly mt-40">
+            <h1 class="font-bold text-5xl">
+                Plan the present. Build the future.
+            </h1>
+            <div>
+                <button class="p-2 rounded-xl mr-2 w-25 bg-gray-400 font-bold">Download</button>
+                <button class="bg-white text-black w-25 p-2 rounded-xl">Open APP</button>
+            </div>
+
+        </div>
+
+
+    </section>
+    <footer class="bg-black text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-6  gap-10">
+          
+            
+          <div>
+            <img src="./images/linear-app-icon.png" alt="Logo" class="w-8 h-8">
+          </div>
+      
+          <div>
+            <h3 class="text-white font-semibold mb-4">Features</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:text-white">Plan</a></li>
+              <li><a href="#" class="hover:text-white">Build</a></li>
+              <li><a href="#" class="hover:text-white">Insights</a></li>
+              <li><a href="#" class="hover:text-white">Customer Requests</a></li>
+              <li><a href="#" class="hover:text-white">Linear Asks</a></li>
+              <li><a href="#" class="hover:text-white">Security</a></li>
+              <li><a href="#" class="hover:text-white">Mobile</a></li>
+            </ul>
+          </div>
+      
+          <div>
+            <h3 class="text-white font-semibold mb-4">Product</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:text-white">Pricing</a></li>
+              <li><a href="#" class="hover:text-white">Method</a></li>
+              <li><a href="#" class="hover:text-white">Integrations</a></li>
+              <li><a href="#" class="hover:text-white">Changelog</a></li>
+              <li><a href="#" class="hover:text-white">Documentation</a></li>
+              <li><a href="#" class="hover:text-white">Download</a></li>
+              <li><a href="#" class="hover:text-white">Switch</a></li>
+            </ul>
+          </div>
+      
+          <div>
+            <h3 class="text-white font-semibold mb-4">Company</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:text-white">About</a></li>
+              <li><a href="#" class="hover:text-white">Customers</a></li>
+              <li><a href="#" class="hover:text-white">Careers</a></li>
+              <li><a href="#" class="hover:text-white">Now</a></li>
+              <li><a href="#" class="hover:text-white">README</a></li>
+              <li><a href="#" class="hover:text-white">Quality</a></li>
+              <li><a href="#" class="hover:text-white">Brand</a></li>
+            </ul>
+          </div>
+      
+          <div>
+            <h3 class="text-white font-semibold mb-4">Resources</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:text-white">Developers</a></li>
+              <li><a href="#" class="hover:text-white">Status</a></li>
+              <li><a href="#" class="hover:text-white">Startups</a></li>
+              <li><a href="#" class="hover:text-white">Report vulnerability</a></li>
+              <li><a href="#" class="hover:text-white">DPA</a></li>
+              <li><a href="#" class="hover:text-white">Privacy</a></li>
+              <li><a href="#" class="hover:text-white">Terms</a></li>
+            </ul>
+          </div>
+      
+          <div>
+            <h3 class="text-white font-semibold mb-4">Connect</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:text-white">Contact us</a></li>
+              <li><a href="#" class="hover:text-white">Community</a></li>
+              <li><a href="#" class="hover:text-white">X (Twitter)</a></li>
+              <li><a href="#" class="hover:text-white">GitHub</a></li>
+              <li><a href="#" class="hover:text-white">YouTube</a></li>
+            </ul>
+          </div>
+      
+        </div>
+      </footer>
+      
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const cardContainer = document.querySelector('.card-wrapper');
+            const cards = document.querySelectorAll('.card');
+
+            let currentIndex = 0;
+            const cardWidth = cards[0].offsetWidth + 16;
+            function updateCarousel() {
+                cardContainer.style.transform = `translateX(${-currentIndex * cardWidth}px)`;
+            }
+
+            nextBtn.addEventListener('click', function () {
+                currentIndex = (currentIndex + 1) % cards.length;
+                updateCarousel();
+            });
+
+            prevBtn.addEventListener('click', function () {
+                currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+                updateCarousel();
+            });
+        });
+    </script>
+
 </body>
 
 </html>
