@@ -17,21 +17,19 @@
             margin: 0;
             padding: 0;
             overflow-x: hidden;
-            /* prevent horizontal scrollbar */
+          
         }
 
-        /* Hide vertical scrollbar but keep scrolling */
         body {
             overflow-y: scroll;
             -ms-overflow-style: none;
-            /* IE/Edge */
+
             scrollbar-width: none;
-            /* Firefox */
+
         }
 
         body::-webkit-scrollbar {
             display: none;
-            /* Chrome/Safari */
         }
 
         @keyframes scroll-left {
@@ -44,36 +42,18 @@
             }
         }
 
-        /* Only apply animation below 640px */
         @media (max-width: 639px) {
             .scrolling {
                 display: flex;
-                /* Make them inline in a single row */
+
                 gap: 1.5rem;
-                /* spacing */
+
                 animation: scroll-left 15s linear infinite;
                 width: max-content;
-                /* ensures row is not squished */
+
             }
         }
 
-        @media (max-width: 1023px) {
-            .scrollbar-thin {
-                scrollbar-width: thin;
-            }
-
-            .scrollbar-thumb-gray-700::-webkit-scrollbar-thumb {
-                background-color: #374151;
-            }
-
-            .scrollbar-track-gray-900::-webkit-scrollbar-track {
-                background-color: #111827;
-            }
-
-            .scrollbar-thin::-webkit-scrollbar {
-                height: 8px;
-            }
-        }
     </style>
 </head>
 
@@ -227,15 +207,15 @@
                 </button>
             </div>
         </nav>
-       
+
         <div id="mobile-menu"
             class="fixed top-0 right-0 h-full w-72 bg-black text-white transform translate-x-full transition-transform duration-300 ease-in-out z-50 overflow-y-auto">
             <div class="flex justify-between items-center px-6 py-4 border-b border-gray-800">
-               
+
                 <button id="close-btn" class="text-2xl">✕</button>
             </div>
 
-           
+
             <div class="px-6 py-4 space-y-6">
                 <div>
                     <h5 class="text-gray-400 text-xs uppercase mb-3">Product</h5>
@@ -267,7 +247,7 @@
     <section class="bg-black flex justify-center flex-col">
         <div class="text-center text-white mt-30">
 
-            <!-- Headings -->
+
             <h1 class="2xl:text-5xl xl:text-5xl lg:text-4xl md:text-3xl sm:text-xl text-lg font-bold
                        2xl:mr-125 xl:mr-125 lg:mr-100 md:mr-80 mb-2">
                 Linear is a purpose-built tool fo
@@ -277,7 +257,7 @@
                 planning and building products
             </h1>
 
-            <!-- Paragraphs -->
+
             <p class="2xl:text-lg xl:text-base lg:text-sm md:text-base sm:text-sm text-xs
                       2xl:mr-200 xl:mr-210 lg:mr-155 md:mr-95 mt-2 text-gray-400">
                 Meet the system for modern software development.
@@ -286,7 +266,7 @@
                 Streamline issues, projects, and product roadmaps
             </p>
 
-            <!-- Buttons -->
+
             <div class="mb-5 
             2xl:mr-210 xl:mr-210 lg:mr-155 md:mr-105
             flex flex-col sm:flex-row sm:space-x-2 space-y-2 sm:space-y-0 items-center justify-center">
@@ -374,7 +354,8 @@
         </div>
 
 
-
+        <!-- <div class="carousel-container overflow-x-auto lg:overflow-x-visible scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-900" style="scrollbar-color: #374151 #111827;"> -->
+        
         <div class="flex justify-center space-x-8 mt-20 
             overflow-x-auto lg:overflow-x-visible 
             scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-900"
@@ -418,60 +399,60 @@
     </section>
     <section class="bg-gradient-to-b  from-gray-950  to-black p-4 mt-50 mb-50">
 
-        <div class="text-white ml-5 sm:ml-10 md:ml-20 lg:ml-40 xl:ml-60 2xl:ml-95 mt-10 sm:mt-15 md:mt-20 lg:mt-25 xl:mt-30">
+        <div
+            class="text-white ml-5 sm:ml-10 md:ml-20 lg:ml-40 xl:ml-60 2xl:ml-95 mt-10 sm:mt-15 md:mt-20 lg:mt-25 xl:mt-30">
 
-          
+
             <div class="flex items-center gap-2 sm:gap-3">
-              <span class="h-2 w-4 bg-green-400 rounded"></span>
-              <h3 class="text-sm sm:text-base md:text-lg lg:text-xl font-semibold">
-                Project and long-term planning
-                <span class="ml-2 sm:ml-3 md:ml-4 lg:ml-5 text-sm sm:text-base lg:text-lg hover:text-sm">></span>
-              </h3>
+                <span class="h-2 w-4 bg-green-400 rounded"></span>
+                <h3 class="text-sm sm:text-base md:text-lg lg:text-xl font-semibold">
+                    Project and long-term planning
+                    <span class="ml-2 sm:ml-3 md:ml-4 lg:ml-5 text-sm sm:text-base lg:text-lg hover:text-sm">></span>
+                </h3>
             </div>
-          
-           
+
+
             <h1 class="mt-4 sm:mt-5 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-              Set the product direction
+                Set the product direction
             </h1>
-          
-            
+
+
             <p class="mt-5 sm:mt-8 font-bold text-sm sm:text-base md:text-lg">
-              Align your team around a unified product timeline
+                Align your team around a unified product timeline
             </p>
-          
-           
+
+
             <p class="mt-2 text-xs sm:text-sm md:text-base lg:text-lg text-gray-500">
-              Plan, manage, and track all product<br class="hidden sm:block">
-              initiatives with Linear's visual planning tools.
+                Plan, manage, and track all product<br class="hidden sm:block">
+                initiatives with Linear's visual planning tools.
             </p>
-          </div>
-          
+        </div>
+
         <img class="mt-20 ml-30" src="./images/image2.png" alt="image2">
         <hr class="border-t border-gray-800 mt-5 w-[60%] mx-auto" />
 
         <div class="flex flex-col md:flex-row justify-center text-white mt-5">
 
             <div class="w-full lg:w-1/2 p-4 sm:p-8 lg:p-12 flex flex-col justify-center items-center lg:items-end ">
-                <h2 class="text-lg sm:text-xl md:text-2xl font-bold mb-4 sm:mb-6 text-start lg:text-right mr-15">Manage projects end-to-end</h2>
+                <h2 class="text-lg sm:text-xl md:text-2xl font-bold mb-4 sm:mb-6 text-start lg:text-right mr-15">Manage
+                    projects end-to-end</h2>
                 <p class="text-gray-400 text-base sm:text-lg mb-6 sm:mb-8 text-center lg:text-left">
                     Consolidate specs, milestones, tasks, and other
                     <span class="hidden sm:inline"><br></span>
                     documentation in one centralized location.
                 </p>
-                <img 
-                    class="size-100 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl mx-auto lg:mx-0 rounded-lg shadow-md"
-                    src="./images/image3.png"
-                    alt="Manage projects end-to-end"
-                >
+                <img class="size-100 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl mx-auto lg:mx-0 rounded-lg shadow-md"
+                    src="./images/image3.png" alt="Manage projects end-to-end">
             </div>
 
             <div class="h-px bg-gray-800 my-8 md:hidden"></div>
             <div class="w-px bg-gray-800 mx-12 hidden md:block"></div>
             <div class="w-full lg:w-1/2 p-4 sm:p-8 lg:p-12 flex flex-col justify-center items-center lg:items-start">
                 <h2 class="text-xl font-bold mb-6">Project updates</h2>
-                <p class="text-gray-400 text-lg mb-8 flex flex-col items-center justify-center min-h-[60px] sm:min-h-[70px] md:min-h-[80px] lg:min-h-[90px]">
-                  Communicate progress and project health 
-                  <span>with built-in project updates.</span>
+                <p
+                    class="text-gray-400 text-lg mb-8 flex flex-col items-center justify-center min-h-[60px] sm:min-h-[70px] md:min-h-[80px] lg:min-h-[90px]">
+                    Communicate progress and project health
+                    <span class="mr-25">with built-in project updates.</span>
                 </p>
                 <img class="size-100 mt-5" src="./images/image4.png">
             </div>
@@ -480,7 +461,7 @@
         </div>
         <hr class="border-t border-gray-800 mt-5 w-[60%] mx-auto" />
         <div class="text-white flex flex-col md:flex-row gap-10 md:gap-20 lg:gap-40 xl:gap-80 items-center md:items-start">
-            <div class="w-full md:w-1/2">
+            <div class="w-full md:w-1/2 ml-30 mt-20">
                 <p class="text-xl font-bold mb-2 ml-0 md:ml-24 mt-10 md:mt-12">Ideate and specify</p>
                 <p class="text-xl font-bold ml-0 md:ml-24">what to build next</p>
 
@@ -500,11 +481,25 @@
                     </div>
                 </div>
             </div>
-            <div class="w-full md:w-1/2 flex justify-center md:justify-start mt-8 md:mt-0">
+            <div class="w-full md:w-1/2 flex justify-center md:justify-start mt-8 md:mt-0 md:mr-10 lg:mr-32 xl:mr-48 2xl:mr-80">
                 <img 
-                    class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl h-auto mt-0 md:mt-24"
-                    src="./images/image5.png"
+                    src="./images/image5.png" 
                     alt="Ideate and specify what to build next"
+                    class="
+                        w-4/5
+                        max-w-[260px]
+                        sm:w-3/4 sm:max-w-sm
+                        md:w-full md:max-w-md
+                        lg:max-w-lg
+                        xl:max-w-xl
+                        2xl:max-w-2xl
+                        h-auto
+                        rounded-lg
+                        shadow-md
+                        object-contain
+                        mt-0 md:mt-10
+                    "
+                    style="min-width:220px;"
                 >
             </div>
         </div>
@@ -512,161 +507,237 @@
         <div class="text-white grid grid-cols-2 md:grid-cols-4 gap-10 mt-10 text-center">
 
             <div>
-              <h1 class="mb-3 sm:mb-5 text-lg sm:text-xl font-semibold">Initiatives</h1>
-              <p class="text-gray-500 text-sm sm:text-base">
-                Coordinates strategic product <br>effort
-              </p>
+                <h1 class="mb-3 sm:mb-5 text-lg sm:text-xl font-semibold">Initiatives</h1>
+                <p class="text-gray-500 text-sm sm:text-base">
+                    Coordinates strategic product <br>effort
+                </p>
             </div>
-          
+
             <div>
-              <h1 class="mb-3 sm:mb-5 text-lg sm:text-xl font-semibold">Cross-team project</h1>
-              <p class="text-gray-500 text-sm sm:text-base">
-                Collaborate across team and <br>departments effort
-              </p>
+                <h1 class="mb-3 sm:mb-5 text-lg sm:text-xl font-semibold">Cross-team project</h1>
+                <p class="text-gray-500 text-sm sm:text-base">
+                    Collaborate across team and <br>departments effort
+                </p>
             </div>
-          
+
             <div>
-              <h1 class="mb-3 sm:mb-5 text-lg sm:text-xl font-semibold">Milestones</h1>
-              <p class="text-gray-500 text-sm sm:text-base">
-                Break projects down into <br>concrete phases
-              </p>
+                <h1 class="mb-3 sm:mb-5 text-lg sm:text-xl font-semibold">Milestones</h1>
+                <p class="text-gray-500 text-sm sm:text-base">
+                    Break projects down into <br>concrete phases
+                </p>
             </div>
-          
+
             <div>
-              <h1 class="mb-3 sm:mb-5 text-lg sm:text-xl font-semibold">Progress insights</h1>
-              <p class="text-gray-500 text-sm sm:text-base">
-                Track scope, velocity, and <br>progress over time.
-              </p>
+                <h1 class="mb-3 sm:mb-5 text-lg sm:text-xl font-semibold">Progress insights</h1>
+                <p class="text-gray-500 text-sm sm:text-base">
+                    Track scope, velocity, and <br>progress over time.
+                </p>
             </div>
-          
-          </div>
-          
+
+        </div>
+
     </section>
     <section class="bg-gradient-to-b  from-gray-950  to-black p-4 mt-50 mb-50">
+        <div
+            class="text-white ml-5 sm:ml-10 md:ml-20 lg:ml-40 xl:ml-60 2xl:ml-80 mt-10 sm:mt-15 md:mt-20 lg:mt-25 xl:mt-30">
 
-        <div class="text-white ml-95 mt-30">
-            <p>
-            <div class="flex items-center gap-3">
+            <!-- Tagline -->
+            <div class="flex items-center gap-2 sm:gap-3">
                 <span class="h-2 w-4 bg-green-400 rounded"></span>
-                <h3 class="text-white font-semibold">Task tracking and sprint planning <span
-                        class="ml-5 text-xl hover:text-sm">></span>
-                    </p>
+                <h3 class="text-sm sm:text-base md:text-lg lg:text-xl font-semibold flex items-center">
+                    Task tracking and sprint planning
+                    <span class="ml-2 sm:ml-3 md:ml-4 lg:ml-5 text-sm sm:text-base lg:text-lg hover:text-sm">&gt;</span>
                 </h3>
             </div>
 
+            <!-- Heading -->
+            <h1 class="mt-4 sm:mt-5 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+                Issue tracking you’ll enjoy using
+            </h1>
 
-            <h1 class="text-5xl font-bold mt-5">Issue tracking you`ll enjoy using</h1> en</h1>
-            <p class="font-bold mt-15">Optimized for speed and efficiency.</p>
-            <p class="text-gray-500">Create tasks in seconds, discuss issues<br>in context, and breeze through your
-                work<br>in views tailored to you and your team.
+            <!-- Subheading -->
+            <p class="mt-5 sm:mt-8 font-bold text-sm sm:text-base md:text-lg">
+                Optimized for speed and efficiency.
             </p>
-            <img class="mt-20" src="./images/image6.png" alt="image2">
+
+            <!-- Description -->
+            <p class="mt-2 text-xs sm:text-sm md:text-base lg:text-lg text-gray-500">
+                Create tasks in seconds, discuss issues<br class="hidden sm:block">
+                in context, and breeze through your work<br class="hidden sm:block">
+                in views tailored to you and your team.
+            </p>
         </div>
+
+
+        <div class="mt-10 sm:mt-16 ml-5 sm:ml-10 md:ml-20 lg:ml-40 xl:ml-60 2xl:ml-80">
+            <img class="w-full max-w-4xl h-auto" src="./images/image6.png" alt="Issue tracking illustration">
+        </div>
+
+
+
+
+
         <hr class="border-t border-gray-800 mt-5 w-[60%] mx-auto" />
 
         <div class="flex flex-col md:flex-row justify-center text-white mt-5">
 
-            <div class="lg:w-1/2 p-8 lg:p-16 flex flex-col justify-center">
-                <h2 class="text-xl font-bold mb-6 md:ml-82">Build momentum with Cycles</h2>
-                <p class="text-gray-400 text-lg mb-8 md:ml-82">Create healthy routines and focus yourr <br>
-                    team on what work should happen next.</p>
-                <img class="size-100 md:ml-80" src="./images/image7.png">
+            <div class="w-full lg:w-1/2 p-4 sm:p-8 lg:p-12 flex flex-col justify-center items-center lg:items-end ">
+                <h2
+                    class="text-lg sm:text-xl md:text-2xl font-bold mb-4 sm:mb-6 text-start lg:text-right xl:mr-15 lg:text-2xl lg:mr-12">
+                    Build momentum with Cycles</h2>
+                <p class="text-gray-400 text-base sm:text-lg mb-6 sm:mb-8 text-center lg:text-left mr-15">
+                    Create healthy routines and focus your
+                    <span class="hidden sm:inline"><br></span>
+                    team on what work should happen next.
+
+
+                </p>
+                <img class="size-100 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl mx-auto lg:mx-0 rounded-lg shadow-md"
+                    src="./images/image7.png" alt="Manage projects end-to-end">
             </div>
 
             <div class="h-px bg-gray-800 my-8 md:hidden"></div>
             <div class="w-px bg-gray-800 mx-12 hidden md:block"></div>
-
-            <div class="lg:w-1/2 p-8 lg:p-16 flex flex-col justify-center relative overflow-hidden">
-                <h2 class="text-xl font-bold mb-6">Manage incoming work with Triage</h2>
-                <p class="text-gray-400 text-lg mb-8">Review and assign incoming bug reports, feature requests,<br> and
-                    other unplanned work.</p>
+            <div
+                class="w-full lg:w-1/2 p-4 sm:p-8 lg:p-12 flex flex-col justify-center items-center lg:items-start mt-5">
+                <h2
+                    class="text-xl  sm:text-2xl lg:text-2xl font-bold mb-4 sm:mb-6 px-4 sm:px-0 sm:ml-5 text-center lg:text-left">
+                    Manage incoming work with Triages</h2>
+                <p
+                    class="text-gray-400 ml-5 text-sm sm:text-base lg:text-lg mb-4 sm:mb-6 lg:mb-8 text-center lg:text-left px-4 sm:px-0">
+                    Review and assign incoming bug reports,
+                    <br>
+                    feature requests, and other unplanned work
+                </p>
                 <img class="size-100 mt-5" src="./images/image8.png">
             </div>
 
             <div class="w-px bg-gray-800 ml-12 hidden md:block"></div>
         </div>
-        <hr class="border-t border-gray-800 mt-5 w-[60%] mx-auto" />
-        <div class="text-white ml-95 mt-30">
-
-            <h1 class="text-3xl font-bold mt-5">Linear Insights</h1>
-            <p class="font-bold mt-5">Take the guesswork out of product planning with <br>realtime analytics and
-                reporting dashboards.</p>
-            <a href="#" class="inline-block mt-5 px-4 py-2 text-white"
-                style="border: 1px solid gray; border-radius: 8px; background-color: black;">
+        <div
+            class="text-white ml-5 sm:ml-10 md:ml-20 lg:ml-40 xl:ml-60 2xl:ml-80 mt-10 sm:mt-15 md:mt-20 lg:mt-25 xl:mt-30">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-3xl font-bold mt-5 whitespace-nowrap">Linear Insights
+            </h1>
+            <p class="text-gray-400 mt-5 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl whitespace-nowrap">
+                Take the guesswork out of product planning with <br> realtime analytics and reporting dashboards.
+            </p>
+            <a href="#" class="inline-block mt-5 px-4 py-2 text-white text-sm sm:text-base md:text-lg"
+                style="border: 1px solid gray; border-radius: 8px; background-color: black; white-space: nowrap;">
                 Learn more
             </a>
-
-            <img class="mt-20" src="./images/image9.png" alt="image2">
+            <div class="mt-20 max-w-full overflow-x-auto">
+                <img class="w-full max-w-4xl h-auto" src="./images/image9.png" alt="Linear Insights illustration">
+            </div>
         </div>
         <hr class="border-t border-gray-900 mt-20 w-[60%] mx-auto" />
-        <div class="text-white flex justify-center-safe mt-10 gap-25">
+        <div class="text-white grid grid-cols-2 md:grid-cols-4 gap-8 mt-10 text-center">
             <div>
-                <h1 class="mb-5">Tailored workflows</h1>
-                <p class="text-gray-500">Track progress across custom<br>issue flows for your team.</p>
+                <h1 class="mb-3 sm:mb-5 font-semibold">Tailored workflows</h1>
+                <p class="text-gray-500 text-sm sm:text-base">
+                    Track progress across custom<br>issue flows for your team.
+                </p>
             </div>
+
             <div>
-                <h1 class="mb-5">Custom views</h1>
-                <p class="text-gray-500 ">Switch between list and board.<br>Group issues with swimlanes.</p>
+                <h1 class="mb-3 sm:mb-5 font-semibold">Custom views</h1>
+                <p class="text-gray-500 text-sm sm:text-base">
+                    Switch between list and board.<br>Group issues with swimlanes.
+                </p>
             </div>
+
             <div>
-                <h1 class="mb-5">Filters</h1>
-                <p class="text-gray-500">Refine issue lists down to what's<br>most relevant to you.</p>
+                <h1 class="mb-3 sm:mb-5 font-semibold">Filters</h1>
+                <p class="text-gray-500 text-sm sm:text-base">
+                    Refine issue lists down to what's<br>most relevant to you.
+                </p>
             </div>
+
             <div>
-                <h1 class="mb-5">SLAs</h1>
-                <p class="text-gray-500">Automatically apply deadlines tod<br>time-sensitive tasks.</p>
+                <h1 class="mb-3 sm:mb-5 font-semibold">SLAs</h1>
+                <p class="text-gray-500 text-sm sm:text-base">
+                    Automatically apply deadlines to<br>time-sensitive tasks.
+                </p>
             </div>
         </div>
+
     </section>
     <section class="bg-gradient-to-b  from-gray-950  to-black p-4 mt-50 mb-50">
 
-        <div class="text-white ml-95 mt-30">
-            <p>
-            <div class="flex items-center gap-3">
+        <div class="text-white mt-10 sm:mt-12 md:mt-16 lg:mt-24 xl:mt-30 2xl:mt-36 
+                    ml-5 sm:ml-10 md:ml-20 lg:ml-40 xl:ml-60 2xl:ml-80">
+            <div class="flex items-center gap-2 sm:gap-3">
                 <span class="h-2 w-4 bg-blue-600 rounded"></span>
-                <h3 class="text-white font-semibold">Artificial Intelligence<span
-                        class="ml-5 text-xl hover:text-sm">></span>
+                <h3 class="text-sm sm:text-base md:text-lg lg:text-xl font-semibold">
+                    Artificial Intelligence
+                    <span class="ml-2 sm:ml-3 md:ml-4 lg:ml-5 text-sm sm:text-base lg:text-lg hover:text-sm">></span>
                 </h3>
             </div>
-            </p>
 
-
-            <h1 class="text-5xl font-bold leading-tight mt-5">AI-assisted product development</h1>
-            <p class="font-bold mt-15">Linear for Agents. Choose from a variety of AI</p>
-            <p class="text-gray-500">agents and start delegating work, from code<br>generation to other technical tasks
+            <h1 class="mt-4 sm:mt-5 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+                AI-assisted product development
+            </h1>
+            <p class="mt-5 sm:mt-8 font-bold text-sm sm:text-base md:text-lg">
+                Linear for Agents. Choose from a variety of AI
             </p>
-            <a href="#" class="inline-block mt-5 px-4 py-2 text-white"
-                style="border: 1px solid gray; border-radius: 8px; background-color: black;">
+            <p class="mt-2 text-xs sm:text-sm md:text-base lg:text-lg text-gray-500">
+                agents and start delegating work, from code
+                <br class="hidden sm:block">
+                generation to other technical tasks
+            </p>
+            <a href="#" class="inline-block mt-5 px-4 py-2 text-white text-sm sm:text-base md:text-lg"
+                style="border: 1px solid gray; border-radius: 8px; background-color: black; white-space: nowrap;">
                 Learn more
             </a>
-            <img class="mt-20" src="./images/image10.png" alt="image2">
+            <div class="mt-10 sm:mt-16 md:mt-20 max-w-full overflow-x-auto">
+                <img class="w-full max-w-2xl sm:max-w-3xl md:max-w-4xl h-auto " src="./images/image10.png"
+                    alt="AI-assisted product development illustration">
+            </div>
         </div>
         <hr class="border-t border-gray-800 mt-5 w-[60%] mx-auto" />
 
-        <div class="flex flex-col md:flex-row justify-center text-white mt-5">
+        <div class="flex flex-col md:flex-row justify-center text-white mt-5 gap-8 md:gap-0">
 
-            <div class="lg:w-1/2 p-8 lg:p-16 flex flex-col justify-center">
-                <h2 class="text-xl font-bold mb-6 md:ml-82">Product Intelligence</h2>
-                <p class="text-gray-400 text-lg mb-8 md:ml-82">Streamline your product development workflows <br>
-                    with AI assistance for routine, manual tasks.</p>
 
-                <img class="size-100 md:ml-80" src="./images/image11.png">
+            <div
+                class="w-full md:w-1/2 flex flex-col justify-center items-center md:items-end px-4 sm:px-8 md:px-6 lg:px-12 xl:px-16 py-6 sm:py-8 lg:py-16">
+                <div class="md:text-left">
+                    <!-- Heading -->
+                    <h2 class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-4 sm:mb-6 md:mb-8">
+                        Product Intelligence
+                    </h2>
+
+                    <!-- Paragraph -->
+                    <p class="text-gray-400 text-base sm:text-lg md:text-xl mb-6 sm:mb-8 md:mb-10">
+                        Streamline your product development workflows <br>
+                        with AI assistance for routine, manual tasks.
+                    </p>
+                </div>
+
+                <img class="w-40 h-40 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 xl:w-80 xl:h-80 2xl:w-96 2xl:h-96 object-contain mx-auto md:mx-0"
+                    src="./images/image11.png" alt="Product Intelligence">
             </div>
 
-            <div class="h-px bg-gray-800 my-8 md:hidden"></div>
-            <div class="w-px bg-gray-800 mx-12 hidden md:block"></div>
 
-            <div class="lg:w-1/2 p-8 lg:p-16 flex flex-col justify-center relative overflow-hidden">
-                <h2 class="text-xl font-bold mb-6">Linear MCP</h2>
-                <p class="text-gray-400 text-lg mb-8">Connect Linear to your favorite tools<br> including Cursor,
-                    Claude, ChatGPT, and more.
+            <div class="h-px bg-gray-800 my-6 sm:my-8 md:hidden w-[80%] mx-auto"></div>
 
+            <div class="w-px bg-gray-800 mx-0 sm:mx-8 md:mx-6 lg:mx-12 xl:mx-16 hidden md:block"></div>
+
+
+            <div
+                class="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start px-4 sm:px-8 md:px-6 lg:px-12 xl:px-16 py-6 sm:py-8 lg:py-16 relative overflow-hidden">
+                <h2
+                    class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-4 sm:mb-6 md:mb-8 text-center md:text-left w-full md:w-auto">
+                    Linear MCP
+                </h2>
+                <p
+                    class="text-gray-400 text-base sm:text-lg md:text-xl mb-6 sm:mb-8 md:mb-10 text-center md:text-left w-full md:w-auto">
+                    Connect Linear to your favorite tools<br>
+                    including Cursor, Claude, ChatGPT, and more.
                 </p>
-
-                <img class="size-100 mt-5" src="./images/image12.png">
+                <img class="w-40 h-40 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 xl:w-80 xl:h-80 2xl:w-96 2xl:h-96 object-contain mx-auto md:mx-0 mt-4 sm:mt-5"
+                    src="./images/image12.png" alt="Linear MCP">
             </div>
 
-            <div class="w-px bg-gray-800 ml-12 hidden md:block"></div>
         </div>
         <hr class="border-t border-gray-800 mt-5 w-[60%] mx-auto" />
         <div class="text-white flex justify-self gap-80">
@@ -674,31 +745,30 @@
     </section>
     <section class="bg-gradient-to-b  from-gray-950  to-black p-4 mt-50 mb-50">
 
-        <div class="text-white ml-95 mt-30">
-            <p>
-            <div class="flex items-center gap-3">
+        <div class="text-white ml-4 sm:ml-10 md:ml-20 lg:ml-40 xl:ml-60 2xl:ml-95 mt-8 sm:mt-12 md:mt-20 lg:mt-30">
+            <div class="flex items-center gap-2 sm:gap-3  md:ml-10">
                 <span class="h-2 w-4 bg-purple-600 rounded"></span>
-                <h3 class="text-white font-semibold">Workflows and integrations
-                    <span class="ml-5 text-xl hover:text-sm">></span>
+                <h3 class="text-sm sm:text-base md:text-lg lg:text-xl font-semibold">
+                    Workflows and integrations
+                    <span class="ml-2 sm:ml-3 md:ml-4 lg:ml-5 text-sm sm:text-base lg:text-xl hover:text-sm">></span>
                 </h3>
             </div>
-            </p>
 
-            <div class="flex items-start text-white mt-20 px-12 gap-10">
-
-                <h1 class="text-5xl font-bold leading-tight">
-                    Collaborate across <br> tools and teams
+            <div
+                class="flex flex-col mb-10 md:flex-row items-start text-white mt-8 sm:mt-12 md:mt-20 px-2 sm:px-6 md:px-12 gap-6 sm:gap-8 md:gap-10">
+                <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4 md:mb-0">
+                    Collaborate across <br class="hidden sm:block" /> tools and teams
                 </h1>
-
-                <p class="text-gray-400 text-lg max-w-md">
-                    Expand the capabilities of the Linear system <br>
-                    with a wide variety of integrations that keep <br>
+                <p class="text-gray-400 text-base sm:text-lg md:text-xl max-w-full md:max-w-md">
+                    Expand the capabilities of the Linear system <br class="hidden sm:block" />
+                    with a wide variety of integrations that keep <br class="hidden sm:block" />
                     everyone in your organization aligned and focused.
                 </p>
             </div>
             <div class="flex flex-col items-center justify-center mt-10">
-                <div class="carousel-container">
-                    <div class="card-wrapper flex justify-center gap-2">
+                <div class=" overflow-x-auto lg:overflow-x-visible scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-900" style="scrollbar-color: #374151 #111827;">
+                    
+                    <div class="card-wrapper flex gap-2">
                         <div class="card relative w-80 aspect-square bg-black flex flex-col justify-between p-6 flex-shrink-0 border border-gray-800 mb-4"
                             style="border-radius:10px">
                             <img class="w-full h-auto object-cover rounded-md mb-4"
@@ -717,7 +787,7 @@
                                 </div>
                             </div>
                         </div>
-
+            
                         <div class="card relative w-80 aspect-square bg-black flex flex-col justify-between p-6 flex-shrink-0 border border-gray-800 mb-4"
                             style="border-radius:10px">
                             <img class="w-full h-auto object-cover rounded-md mb-4"
@@ -736,7 +806,7 @@
                                 </div>
                             </div>
                         </div>
-
+            
                         <div class="card relative w-80 aspect-square bg-black g-gray-500 flex flex-col justify-between p-6 flex-shrink-0 border border-gray-800 mb-4"
                             style="border-radius:10px">
                             <img class="w-full h-auto object-cover rounded-md mb-4"
@@ -755,7 +825,7 @@
                                 </div>
                             </div>
                         </div>
-
+            
                         <div class="card relative w-80 aspect-square bg-black flex flex-col justify-between p-6 flex-shrink-0 border border-gray-800 mb-4"
                             style="border-radius:10px">
                             <img class="w-full h-auto object-cover rounded-md mb-4"
@@ -774,7 +844,7 @@
                                 </div>
                             </div>
                         </div>
-
+            
                         <div class="card relative w-80 aspect-square bg-black flex flex-col justify-between p-6 flex-shrink-0 border border-gray-800 mb-4"
                             style="border-radius:10px">
                             <img class="w-full h-auto object-cover rounded-md mb-4"
@@ -793,7 +863,7 @@
                                 </div>
                             </div>
                         </div>
-
+            
                         <div class="card relative w-80 aspect-square bg-black flex flex-col justify-between p-6 flex-shrink-0 border border-gray-800 mb-4"
                             style="border-radius:10px">
                             <img class="w-full h-auto object-cover rounded-md mb-4"
@@ -814,8 +884,8 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="flex justify-center space-x-9 mt-6">
+            
+                <div class="flex justify-center space-x-9 mt-6 md:hidden lg:flex">
                     <button id="prevBtn"
                         class="w-15 h-15 flex items-center justify-center rounded-full bg-gray-800 text-white text-2xl font-bold shadow-md transition-colors duration-200 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500">
                         <span aria-hidden="true">←</span>
@@ -826,89 +896,79 @@
                     </button>
                 </div>
             </div>
+        </div>
     </section>
     <section class="bg-gradient-to-b from-gray-950 to-black p-10 mt-20 mb-20">
-        <div class="flex justify-between items-start gap-16">
+        <div class="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-8 md:gap-16 w-full">
 
-
-            <div class="text-white ml-95 mt-30">
-
+            <div class="text-white  ml-0 lg:ml-95 mt-10 lg:mt-30">
                 <div class="flex items-center gap-3 mb-5">
                     <span class="h-2 w-4 bg-gray-800 border-r border-white rounded"></span>
                     <h3 class="text-white font-semibold">Under the hood</h3>
                 </div>
-
-
-                <h1 class="text-5xl font-bold leading-tight mb-5">
+                <h1 class="text-3xl md:text-5xl font-bold leading-tight mb-5">
                     Built on strong<br />foundations
                 </h1>
-
-
-                <p class="text-gray-400 text-lg mb-5">
-                    Linear is so simple to use, it's easy to overlook the <br />
-                    wealth of complex technologies packed under the <br />
+                <p class="text-gray-400 text-base md:text-lg mb-5">
+                    Linear is so simple to use, it's easy to overlook the <br class="hidden md:block"/>
+                    wealth of complex technologies packed under the <br class="hidden md:block"/>
                     hood that keep Linear robust, safe, and blazing fast.
                 </p>
-
-                <hr class="border-t border-gray-800 w-100 mb-8" />
-
-
+                <hr class="border-t border-gray-800 w-full md:w-100 mb-8" />
                 <div class="space-y-8">
-                    <div class="flex gap-10">
-                        <h1 class="font-bold w-48">Linear Sync Engine</h1>
-                        <p>Built with a high-<br>performance<br>architecture and<br>an obsessive focus<br>on speed.</p>
+                    <div class="flex gap-6 md:gap-10">
+                        <h1 class="font-bold w-32 md:w-48">Linear Sync Engine</h1>
+                        <p>Built with a high-<br class="hidden md:block">performance<br class="hidden md:block">architecture and<br class="hidden md:block">an obsessive focus<br class="hidden md:block">on speed.</p>
                     </div>
-                    <div class="flex gap-10">
-                        <h1 class="font-bold w-48">Enterprise-ready security</h1>
-                        <p>Best-in-class security<br>practices keep your<br>work safe and secure<br>at every layer.</p>
+                    <div class="flex gap-6 md:gap-10">
+                        <h1 class="font-bold w-32 md:w-48">Enterprise-ready security</h1>
+                        <p>Best-in-class security<br class="hidden md:block">practices keep your<br class="hidden md:block">work safe and secure<br class="hidden md:block">at every layer.</p>
                     </div>
-                    <div class="flex gap-10">
-                        <h1 class="font-bold w-48">Engineered for scale</h1>
-                        <p>Built for teams of all<br>sizes. From early-stage<br>startups to global<br>enterprises.</p>
+                    <div class="flex gap-6 md:gap-10">
+                        <h1 class="font-bold w-32 md:w-48">Engineered for scale</h1>
+                        <p>Built for teams of all<br class="hidden md:block">sizes. From early-stage<br class="hidden md:block">startups to global<br class="hidden md:block">enterprises.</p>
                     </div>
                 </div>
             </div>
-
-
-            <div class="flex-1">
-                <img src="./images/image13.png" alt="illustration" class="h-auto" />
+            <div class="flex-1 hidden lg:block">
+                <img src="./images/image13.png" alt="illustration" class="h-auto w-40 sm:w-56 md:w-72 lg:w-auto 2xl:mt-20 xl:mt-50 lg:mt-50 mx-auto" />
             </div>
         </div>
-        <hr class="border-t border-gray-800 w-110 ml-93" />
-        <div class="flex gap-30 ml-95 text-white mt-5">
-            <div> <img class="size-15"
+        <hr class="border-t border-gray-800 w-full lg:w-110 ml-0 lg:ml-93" />
+        <div class="flex flex-row md:flex-row gap-8 md:gap-30 ml-0 lg:ml-95 lg:mr-30 text-white mt-5">
+            <div>
+                <img class="size-15"
                     src="https://linear.app/cdn-cgi/imagedelivery/fO02fVwohEs9s9UHFwon6A/cc904d39-7051-4326-66a3-a8bee9623b00/f=auto,dpr=2,q=95,fit=scale-down,metadata=none">
                 <p class="m-2">SOC 2</p>
             </div>
-            <div> <img class="size-15"
+            <div>
+                <img class="size-15"
                     src="https://linear.app/cdn-cgi/imagedelivery/fO02fVwohEs9s9UHFwon6A/7c88d201-223f-4cd5-ed1b-6bca858be900/f=auto,dpr=2,q=95,fit=scale-down,metadata=none">
                 <p class="m-2">GDPR</p>
             </div>
-            <div> <img class="size-15"
+            <div>
+                <img class="size-15"
                     src="https://linear.app/cdn-cgi/imagedelivery/fO02fVwohEs9s9UHFwon6A/3bda4af5-963c-466b-7577-b8b8ec178e00/f=auto,dpr=2,q=95,fit=scale-down,metadata=none">
                 <p class="m-2">HIPAA</p>
             </div>
         </div>
-
-        <div class="text-white flex justify-evenly mt-40">
-            <h1 class="font-bold text-5xl">
+        <div class="text-white flex flex-col lg:flex-row justify-center items-center xl:gap-50 md:items-start mt-20 md:mt-40 gap-8 md:gap-0">
+            <h1 class="font-bold text-3xl md:text-5xl xl:text-6xl text-center md:text-left">
                 Plan the present. Build the future.
             </h1>
-            <div>
-                <button class="p-2 rounded-xl mr-2 w-25 bg-gray-400 font-bold">Download</button>
-                <button class="bg-white text-black w-25 p-2 rounded-xl">Open APP</button>
+            <div class="flex w-full lg:w-auto flex-col lg:flex-row gap-4 lg:gap-2 mt-4 lg:mt-0 justify-evenly">
+                <button class="p-2 rounded-xl w-full lg:w-32 md:lg:w-25 bg-gray-400 font-bold">Download</button>
+                <button class="bg-white text-black w-full lg:w-32 md:lg:w-25 p-2 rounded-xl">Open APP</button>
             </div>
-
         </div>
 
 
     </section>
     <footer class="bg-black text-gray-400 py-12">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-6  gap-10">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 md:gap-10">
 
-
-            <div>
-                <img src="./images/linear-app-icon.png" alt="Logo" class="w-8 h-8">
+            <div class="flex justify-center lg:justify-start mb-8 lg:mb-0">
+                <img src="./images/linear-app-icon.png" alt="Logo" class="w-10 h-10 sm:w-8 sm:h-8">
             </div>
 
             <div>
